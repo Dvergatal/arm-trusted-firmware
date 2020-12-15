@@ -49,3 +49,9 @@ that is available through `trustedfirmware.org`_.
 .. _view the full documentation: https://www.trustedfirmware.org/docs/tf-a
 .. _trustedfirmware.org: http://www.trustedfirmware.org
 
+Softgent implementation
+-----------------------
+
+For our platforms we use rockchip kits. To build it i.e. on rk3399 use the command below:
+
+make CROSS_COMPILE=aarch64-linux-gnu- CRASH_REPORTING=1 LOG_LEVEL=40 SPD=opteed PLAT=rk3399 bl31

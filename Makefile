@@ -300,7 +300,8 @@ endif
 
 # Default build string (git branch and commit)
 ifeq (${BUILD_STRING},)
-        BUILD_STRING  :=  $(shell git describe --always --dirty --tags 2> /dev/null)
+        BUILD_STRING  :=  $(shell git describe --always --abbrev=0 --tags 2> /dev/null)
+        BUILD_STRING  :=  $(BUILD_STRING)-softgent
 endif
 VERSION_STRING    :=  v${VERSION_MAJOR}.${VERSION_MINOR}(${BUILD_TYPE}):${BUILD_STRING}
 
